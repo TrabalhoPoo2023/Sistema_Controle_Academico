@@ -12,7 +12,15 @@ public class Turma extends BaseIdentificador{
         super(codigo);
         this.capacidadeTurma = capacidadeTurma;
     }
-
+@Override
+public void Imprimir(){
+    System.out.println("*************************");
+    System.out.println("Cod: "+this.codigo);
+    System.out.println("Capacidade total de alunos: "+this.capacidadeTurma);
+    System.out.println("Alunos: "+this.alunos);
+    System.out.println("Disciplina: "+this.disciplina.nome);
+    System.out.println("Professor: "+ this.professor.nome);
+}
 
     public Turma(int codigo, int capacidadeTurma, Disciplina disciplina, Professor professor) {
         super(codigo);

@@ -12,7 +12,7 @@ public class NotaTrabalho extends BaseIdentificador{
         this.trabalho = trabalho;
     }
 
-
+   
     public double getNota() {
         return nota;
     }
@@ -41,5 +41,15 @@ public class NotaTrabalho extends BaseIdentificador{
     public void setTrabalho(Trabalho trabalho) {
         this.trabalho = trabalho;
     }
+
+     @Override
+    public void Imprimir(){
+        System.out.println("*************************");
+        System.out.println("cod: "+this.codigo);
+        System.out.println("nota: "+this.nota);
+        System.out.println("Aluno: "+this.aluno.nome);
+        System.out.println("Trabalho: "+this.trabalho);
+    }
+
     
 }

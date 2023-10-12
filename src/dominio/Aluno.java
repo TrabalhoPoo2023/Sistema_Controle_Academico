@@ -33,10 +33,16 @@ public class Aluno extends BasePessoa {
     }
 
 //metodo utilizado para testes, apenas para impressão
-
-    @Override
-    public String toString() {
-        return super.toString() +"Aluno [periodo=" + periodo + ", turma=" + turma + "]";
+@Override
+    public void Imprimir(){
+        System.out.println("*************************");
+        System.out.println("cod: "+this.codigo);
+        System.out.println("Aluno: "+this.nome);
+        System.out.println("Data de Nascimento: "+this.dataNascimento);
+        System.out.println("Usuario: "+this.nomeUsuario);
+        System.out.println("Senha: "+this.senha);
+        System.out.println("Periodo: "+this.periodo);
+        System.out.println("Turma: "+this.turma);
     }
   
 }

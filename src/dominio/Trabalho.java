@@ -9,6 +9,13 @@ public class Trabalho extends BaseIdentificador {
         this.descricao = descricao;
         this.disciplina = disciplina;
     }
+    @Override
+    public void Imprimir(){
+        System.out.println("*************************");
+        System.out.println("Cod: "+ this.codigo);
+        System.out.println("Descrição: "+this.descricao);
+        System.out.println("Disciplina: "+this.disciplina.nome);
+    }
 
     public String getDescricao() {
         return descricao;

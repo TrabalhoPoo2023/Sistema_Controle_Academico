@@ -14,4 +14,7 @@ public abstract class BaseIdentificador {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+    public void Imprimir(){
+        
+    }
 }
