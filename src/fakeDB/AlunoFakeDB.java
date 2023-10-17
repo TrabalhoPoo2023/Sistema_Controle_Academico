@@ -1,7 +1,6 @@
 package fakeDB;
 
 import dominio.Aluno;
-import dominio.Turma;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -16,14 +15,12 @@ public class AlunoFakeDB {
     }
 
     private void carregarDados() {
-        Turma turma1 = new Turma(1, 30);
-        Turma turma2 = new Turma(2, 25);
 
-        alunos.add(new Aluno(1, "Mateus", LocalDate.of(1994, 6, 5), "mateus123", "senha123", 20201001, turma1));
-        alunos.add(new Aluno(2, "Lucas", LocalDate.of(1993, 6, 5), "lucas123", "senha456", 20201002, turma1));
-        alunos.add(new Aluno(3, "Pedro", LocalDate.of(1994, 7, 5), "pedro123", "senha789", 20201003, turma2));
-        alunos.add(new Aluno(4, "Tiago", LocalDate.of(1994, 3, 5), "tiago123", "senha101", 20201004, turma2));
-        alunos.add(new Aluno(5, "João", LocalDate.of(1995, 2, 25), "joao123", "senha1234", 20201005, turma1));
+        alunos.add(new Aluno(1, "Mateus", LocalDate.of(1994, 6, 5), "mateus123", "senha123", 20201001));
+        alunos.add(new Aluno(2, "Lucas", LocalDate.of(1993, 6, 5), "lucas123", "senha456", 20201002));
+        alunos.add(new Aluno(3, "Pedro", LocalDate.of(1994, 7, 5), "pedro123", "senha789", 20201003));
+        alunos.add(new Aluno(4, "Tiago", LocalDate.of(1994, 3, 5), "tiago123", "senha101", 20201004));
+        alunos.add(new Aluno(5, "João", LocalDate.of(1995, 2, 25), "joao123", "senha1234", 20201005));
     }
 
     public List<Aluno> listarAlunos() {

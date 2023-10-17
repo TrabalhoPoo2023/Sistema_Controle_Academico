@@ -1,6 +1,6 @@
 package dominio;
 import java.time.LocalDate;
-public abstract class BasePessoa extends BaseDadosComuns {
+public abstract class BasePessoa extends BaseDadosComuns{
     
     protected LocalDate dataNascimento;
     protected String nomeUsuario;

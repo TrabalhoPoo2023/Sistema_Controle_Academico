@@ -1,6 +1,6 @@
 package dominio;
 public class NotaTrabalho extends BaseIdentificador{
-    private double nota;
+    public double nota;
     private Aluno aluno;
     private Trabalho trabalho;
 
@@ -50,6 +50,4 @@ public class NotaTrabalho extends BaseIdentificador{
         System.out.println("Aluno: "+this.aluno.nome);
         System.out.println("Trabalho: "+this.trabalho);
     }
-
-    
 }

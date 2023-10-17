@@ -32,4 +32,5 @@ public class Trabalho extends BaseIdentificador {
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
     }
+    
 }

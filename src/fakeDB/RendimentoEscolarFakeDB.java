@@ -1,4 +1,4 @@
-// Precisa de modificações! Aguardando Dominio RendimentoEscolar
+/*  Precisa de modificações! Aguardando Dominio RendimentoEscolar
 package fakeDB;
 
 import dominio.*;
@@ -36,4 +36,4 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
     public RendimentoEscolarFakeDB() {
         super();
     }
-}
+}*/

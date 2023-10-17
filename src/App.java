@@ -11,7 +11,7 @@ public class App {
        
        //Area de teste do metodo Imprimir()
        
-        Aluno a = new Aluno(00001, "Bruno", LocalDate.of(1997,10,13), "bGon666", "hello123", 5, null);
+        /*Aluno a = new Aluno(00001, "Bruno", LocalDate.of(1997,10,13), "bGon666", "hello123", 5);
         a.Imprimir();
 
        Professor p = new Professor(00002, "Anderson", LocalDate.of(1986,05,10), "andXmaster.009", "**********", "contratado");
@@ -27,7 +27,7 @@ public class App {
         t.Imprimir();
 
         NotaTrabalho nt = new NotaTrabalho(56985, 6.5, a, null);
-        nt.Imprimir();
+        nt.Imprimir();*/
 
     }
 }
