@@ -4,69 +4,34 @@ import dominio.Disciplina;
 import dominio.Turma;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class DisciplinaFakeDB {
-    private static List<Disciplina> disciplinas;
+public class DisciplinaFakeDB extends BaseGenericaFakeDB<Disciplina> {
 
-    public DisciplinaFakeDB() {
-        disciplinas = new ArrayList<>();
-        carregarDados();
-    }
-
-    private void carregarDados() {
+    @Override
+    protected void CarregarDados() {
+        this.tabela = new ArrayList<Disciplina>();
+        
         Turma turma1 = new Turma(1, 30);
         Turma turma2 = new Turma(2, 25);
 
-        disciplinas.add(new Disciplina(1, "Matemática", "Ementa de Matemática"));
-        disciplinas.add(new Disciplina(2, "História", "Ementa de História"));
-        disciplinas.add(new Disciplina(3, "Biologia", "Ementa de Biologia"));
-        disciplinas.add(new Disciplina(4, "Química", "Ementa de Química"));
-        disciplinas.add(new Disciplina(5, "Física", "Ementa de Física"));
+        tabela.add(new Disciplina(1, "Matemática", "Ementa de Matemática"));
+        tabela.add(new Disciplina(2, "História", "Ementa de História"));
+        tabela.add(new Disciplina(3, "Biologia", "Ementa de Biologia"));
+        tabela.add(new Disciplina(4, "Química", "Ementa de Química"));
+        tabela.add(new Disciplina(5, "Física", "Ementa de Física"));
 
-        disciplinas.get(0).getTurmas().add(turma1);
-        disciplinas.get(1).getTurmas().add(turma1);
-        disciplinas.get(2).getTurmas().add(turma2);
-        disciplinas.get(3).getTurmas().add(turma2);
-        disciplinas.get(4).getTurmas().add(turma1);
+        tabela.get(0).getTurmas().add(turma1);
+        tabela.get(1).getTurmas().add(turma1);
+        tabela.get(2).getTurmas().add(turma2);
+        tabela.get(3).getTurmas().add(turma2);
+        tabela.get(4).getTurmas().add(turma1);
     }
 
-    public List<Disciplina> listarDisciplinas() {
-        return disciplinas;
+    public DisciplinaFakeDB() {
+        super();
     }
 
-    public static Disciplina buscarDisciplinaPorCodigo(int codigo) {
-        for (Disciplina disciplina : disciplinas) {
-            if (disciplina.getCodigo() == codigo) {
-                return disciplina;
-            }
-        }
+    public static Disciplina buscarDisciplinaPorCodigo(int i) {
         return null;
-    }
-
-    public void adicionarDisciplina(Disciplina disciplina) {
-        disciplinas.add(disciplina);
-    }
-
-    public void atualizarDisciplina(Disciplina disciplina) {
-        for (int i = 0; i < disciplinas.size(); i++) {
-            if (disciplinas.get(i).getCodigo() == disciplina.getCodigo()) {
-                disciplinas.set(i, disciplina);
-                break;
-            }
-        }
-    }
-
-    public void removerDisciplina(int codigo) {
-        Disciplina disciplinaParaRemover = null;
-        for (Disciplina disciplina : disciplinas) {
-            if (disciplina.getCodigo() == codigo) {
-                disciplinaParaRemover = disciplina;
-                break;
-            }
-        }
-        if (disciplinaParaRemover != null) {
-            disciplinas.remove(disciplinaParaRemover);
-        }
     }
 }

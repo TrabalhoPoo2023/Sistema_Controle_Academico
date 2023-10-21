@@ -7,11 +7,14 @@ public class Disciplina extends BaseDadosComuns {
     private String ementa;
     private List<Turma> turmas;
 
-
-    public Disciplina(int codigo, String nome, String ementa) {
+    
+    public Disciplina(int codigo, String nome, String ementa, List<Turma> turmas) {
         super(codigo, nome);
         this.ementa = ementa;
+        this.turmas = turmas;
     }
+
+
     public String getNome() {
         return nome;
     }

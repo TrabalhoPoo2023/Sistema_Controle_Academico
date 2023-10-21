@@ -1,13 +1,19 @@
-import java.time.LocalDate;
+
 
 import dominio.Aluno;
-import dominio.Disciplina;
-import dominio.NotaTrabalho;
-import dominio.Professor;
-import dominio.Trabalho;
-import dominio.Turma;
+import repositorio.AlunoRepositorio;
+
+
 public class App {
     public static void main(String[] args) throws Exception {
+
+
+        AlunoRepositorio repo = new AlunoRepositorio();
+         for (Aluno aluno : repo.ReadAll()) {
+             System.out.println("-----------------------------------");
+             aluno.Imprimir();
+
+         }
        
        //Area de teste do metodo Imprimir()
        

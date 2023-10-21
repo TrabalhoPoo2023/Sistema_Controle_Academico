@@ -8,16 +8,13 @@ public class Professor extends BasePessoa{
     private String cargo;
     private List<Turma> turmas;
 
-    
 
-    public Professor(int codigo, String nome, LocalDate dataNascimento, String nomeUsuario, String senha,
-            String cargo) {
+    public Professor(int codigo, String nome, LocalDate dataNascimento, String nomeUsuario, String senha, String cargo,
+            List<Turma> turmas) {
         super(codigo, nome, dataNascimento, nomeUsuario, senha);
         this.cargo = cargo;
+        this.turmas = turmas;
     }
-
-
-
 
     public String getCargo() {
         return cargo;

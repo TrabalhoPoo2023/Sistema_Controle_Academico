@@ -2,13 +2,13 @@ package fakeDB;
 
 import java.util.ArrayList;
 
-public abstract class BaseGenericaFakeDB<TDom> {
+public abstract class BaseGenericaFakeDB<TDominio> {
     
-    protected ArrayList<TDom> tabela;
+    protected ArrayList<TDominio> tabela;
 
-    public ArrayList<TDom> getTabela() {
+    public ArrayList<TDominio> getTabela() {
         if (this.tabela == null){
-            this.tabela = new ArrayList<TDom>();
+            this.tabela = new ArrayList<TDominio>();
         }
         return this.tabela;
     }
@@ -16,6 +16,7 @@ public abstract class BaseGenericaFakeDB<TDom> {
     protected abstract void CarregarDados();
 
     public BaseGenericaFakeDB(){
+        this.tabela = new ArrayList<TDominio>();
         this.CarregarDados();
     }
 }
