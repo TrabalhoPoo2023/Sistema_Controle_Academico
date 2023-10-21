@@ -4,6 +4,7 @@ import dominio.Disciplina;
 import dominio.Turma;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DisciplinaFakeDB extends BaseGenericaFakeDB<Disciplina> {
 
