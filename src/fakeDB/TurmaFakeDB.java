@@ -20,7 +20,7 @@ public class TurmaFakeDB extends BaseGenericaFakeDB<Turma> {
         super();
     }
 
-    public Turma Selecionar(int i) {
+    public static Turma Selecionar(int i) {
         return null;
     }
 }

@@ -34,7 +34,6 @@ public class DisciplinaRepositorio extends BaseGenericaCRUD <DisciplinaFakeDB,Di
         Disciplina alvo = this.Read(instancia.getCodigo());
         alvo.setNome(instancia.getNome());
         alvo.setEmenta(instancia.getEmenta());
-        alvo.setTurmas(instancia.getTurmas());
         return alvo;
     }
 //metodo para excluir um professor;

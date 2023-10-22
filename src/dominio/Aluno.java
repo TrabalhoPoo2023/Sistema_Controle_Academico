@@ -19,6 +19,8 @@ public class Aluno extends BasePessoa {
     public void setPeriodo(int periodo) {
         this.periodo = periodo;
     }
+    
+
 
 //metodo utilizado para testes, apenas para impressão
 @Override
@@ -31,5 +33,4 @@ public class Aluno extends BasePessoa {
         System.out.println("Senha: "+this.senha);
         System.out.println("Periodo: "+this.periodo);
     }
-  
 }
