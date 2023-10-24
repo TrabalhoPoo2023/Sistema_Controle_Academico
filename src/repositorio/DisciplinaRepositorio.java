@@ -8,7 +8,7 @@ public class DisciplinaRepositorio extends BaseGenericaCRUD <DisciplinaFakeDB,Di
         this.db = new DisciplinaFakeDB();
         this.dataset = this.db.getTabela();
     }
-//meteodo para adicionar um novo professor;
+
     @Override
     public Disciplina Create(Disciplina instancia) {
         int tam = this.dataset.size() - 1;
@@ -19,7 +19,7 @@ public class DisciplinaRepositorio extends BaseGenericaCRUD <DisciplinaFakeDB,Di
         return instancia;
 
     }
-//metodo para exibir um professor
+
     @Override
     public Disciplina Read(int codigo) {
         for (Disciplina disciplina : this.dataset) {
@@ -28,7 +28,7 @@ public class DisciplinaRepositorio extends BaseGenericaCRUD <DisciplinaFakeDB,Di
         }
         return null;
     }
-//metodo para atualizar dados de um professor;
+
     @Override
     public Disciplina Update(Disciplina instancia) {
         Disciplina alvo = this.Read(instancia.getCodigo());
@@ -36,7 +36,7 @@ public class DisciplinaRepositorio extends BaseGenericaCRUD <DisciplinaFakeDB,Di
         alvo.setEmenta(instancia.getEmenta());
         return alvo;
     }
-//metodo para excluir um professor;
+
     @Override
     public Disciplina Delete(int codigo) {
         Disciplina alvo = this.Read(codigo);

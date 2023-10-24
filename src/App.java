@@ -1,7 +1,17 @@
 
-
 import dominio.Aluno;
+import dominio.Disciplina;
+import dominio.NotaTrabalho;
+import dominio.Professor;
+import dominio.Trabalho;
+import dominio.Turma;
+
 import repositorio.AlunoRepositorio;
+import repositorio.DisciplinaRepositorio;
+import repositorio.NotaTrabalhoRepositorio;
+import repositorio.ProfessorRepositorio;
+import repositorio.TrabalhoRepositorio;
+import repositorio.TurmaRepositorio;
 
 
 public class App {
@@ -14,6 +24,24 @@ public class App {
              aluno.Imprimir();
 
          }
+
+        DisciplinaRepositorio repo1 = new DisciplinaRepositorio();
+         for (Disciplina disciplina : repo1.ReadAll()) {
+             System.out.println("-----------------------------------");
+             disciplina.Imprimir();
+
+         }
+
+         NotaTrabalhoRepositorio repo2 = new NotaTrabalhoRepositorio();
+         for (NotaTrabalho notaTrabalho : repo2.ReadAll()) {
+             System.out.println("-----------------------------------");
+             notaTrabalho.Imprimir();
+
+         }
+        }
+    }
+
+
        
        //Area de teste do metodo Imprimir()
        
@@ -36,9 +64,9 @@ public class App {
         nt.Imprimir();*/
 
 
-        // Area Teste Impressão FakeDB
+        /*Area Teste Impressão FakeDB
         
-/* import java.util.ArrayList;
+import java.util.ArrayList;
 import dominio.Aluno;
 import dominio.Disciplina;
 import dominio.NotaTrabalho;
@@ -155,5 +183,3 @@ public class App {
     }
 }*/
 
-    }
-}
