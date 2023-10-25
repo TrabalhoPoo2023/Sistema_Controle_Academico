@@ -3,6 +3,9 @@ public abstract class BaseIdentificador implements IImpressao{
     
     protected int codigo;
 
+    public BaseIdentificador() {
+    }
+
     public BaseIdentificador(int codigo) {
         this.codigo = codigo;
     }

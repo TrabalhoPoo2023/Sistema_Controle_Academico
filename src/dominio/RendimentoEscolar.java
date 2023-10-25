@@ -1,25 +1,29 @@
 package dominio;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class RendimentoEscolar implements IImpressao{
+public class RendimentoEscolar extends BaseIdentificador{
     private Aluno aluno;
     private Turma turma;
     private double nota1;
     private double nota2;
-    private List<NotaTrabalho> trabalhos;
+    private ArrayList<NotaTrabalho> trabalhos;
     private double mediaTrabalhos;
     private double mediaGeral;
 
-    public RendimentoEscolar(Aluno aluno, Turma turma, double nota1, double nota2, List<NotaTrabalho> trabalhos,
+    public RendimentoEscolar(int codigo, double nota1, double nota2,
             double mediaTrabalhos, double mediaGeral) {
-        this.aluno = aluno;
-        this.turma = turma;
+        super(codigo);
+        this.aluno = new Aluno();
+        this.turma = new Turma();
         this.nota1 = nota1;
         this.nota2 = nota2;
-        this.trabalhos = trabalhos;
+        this.trabalhos = new ArrayList<NotaTrabalho>();
         this.mediaTrabalhos = mediaTrabalhos;
         this.mediaGeral = mediaGeral;
+    }
+
+    public RendimentoEscolar() {
     }
 
     public Aluno getAluno() {
@@ -46,10 +50,10 @@ public class RendimentoEscolar implements IImpressao{
     public void setNota2(double nota2) {
         this.nota2 = nota2;
     }
-    public List<NotaTrabalho> getTrabalhos() {
+    public ArrayList<NotaTrabalho> getTrabalhos() {
         return trabalhos;
     }
-    public void setTrabalhos(List<NotaTrabalho> trabalhos) {
+    public void setTrabalhos(ArrayList<NotaTrabalho> trabalhos) {
         this.trabalhos = trabalhos;
     }
     public double getMediaTrabalhos() {
@@ -64,7 +68,7 @@ public class RendimentoEscolar implements IImpressao{
     public void setMediaGeral(double mediaGeral) {
         this.mediaGeral = mediaGeral;
     }
-    public void CalculoMediaTrabalho(List <NotaTrabalho> trabalhos){
+    public void CalculoMediaTrabalho(ArrayList <NotaTrabalho> trabalhos){
         double somaNotas = 0.0;
         for(NotaTrabalho nota : trabalhos){
             somaNotas += nota.getNota();

@@ -9,7 +9,8 @@ public class Disciplina extends BaseDadosComuns {
         super(codigo, nome);
         this.ementa = ementa;
     }
-
+    public Disciplina() {
+    }
 
     public String getNome() {
         return nome;

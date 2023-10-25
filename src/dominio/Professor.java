@@ -13,6 +13,9 @@ public class Professor extends BasePessoa{
         this.cargo = cargo;
     }
 
+    public Professor() {
+    }
+
     public String getCargo() {
         return cargo;
     }

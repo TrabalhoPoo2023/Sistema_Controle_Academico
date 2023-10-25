@@ -8,6 +8,10 @@ public abstract class BaseDadosComuns extends BaseIdentificador  {
         super(codigo);
         this.nome = nome;
     }
+    
+    public BaseDadosComuns() {
+    }
+
 
     public String getNome() {
         return nome;

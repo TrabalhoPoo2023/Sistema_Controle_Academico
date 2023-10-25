@@ -12,6 +12,10 @@ public class Aluno extends BasePessoa {
     }
 
 
+    public Aluno() {
+    }
+
+
     public int getPeriodo() {
         return periodo;
     }

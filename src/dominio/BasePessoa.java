@@ -13,6 +13,10 @@ public abstract class BasePessoa extends BaseDadosComuns{
         this.senha = senha;
     }
 
+    public BasePessoa() {
+
+    }
+
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }

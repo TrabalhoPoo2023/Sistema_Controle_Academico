@@ -8,11 +8,13 @@ public class NotaTrabalho extends BaseIdentificador{
     public NotaTrabalho(int codigo, double nota, Aluno aluno, Trabalho trabalho) {
         super(codigo);
         this.nota = nota;
-        this.aluno = aluno;
-        this.trabalho = trabalho;
+        this.aluno = new Aluno();
+        this.trabalho = new Trabalho();
     }
 
-   
+    public NotaTrabalho() {
+    }
+
     public double getNota() {
         return nota;
     }

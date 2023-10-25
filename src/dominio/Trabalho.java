@@ -4,11 +4,22 @@ public class Trabalho extends BaseIdentificador {
     private Disciplina disciplina;
     
 
-    public Trabalho(int codigo, String descricao, Disciplina disciplina) {
+    public Trabalho(int codigo, String descricao) {
         super(codigo);
         this.descricao = descricao;
-        this.disciplina = disciplina;
+        this.disciplina = new Disciplina();
     }
+
+    public Trabalho() {
+    
+    }
+
+     public Trabalho(int codigo, String descricao, Disciplina dis){
+        super(codigo);
+        this.descricao = descricao;
+        this.disciplina = dis;
+     }
+
     @Override
     public void Imprimir(){
         System.out.println("*************************");

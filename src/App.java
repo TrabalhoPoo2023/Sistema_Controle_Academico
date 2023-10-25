@@ -19,7 +19,7 @@ public class App {
 
 
         AlunoRepositorio repo = new AlunoRepositorio();
-         for (Aluno aluno : repo.ReadAll()) {
+         for (Aluno aluno : repo.Read() {
              System.out.println("-----------------------------------");
              aluno.Imprimir();
 
