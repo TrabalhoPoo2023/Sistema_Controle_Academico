@@ -44,7 +44,7 @@ public class Menu {
  System.out.println("\n\tProfessores\n");
  System.out.println("4. Exibir lista de professores\n");
  System.out.println("5. Exibir turmas de um professor\n");
- System.out.println("6. Sair\n");
+ System.out.println("6. Voltar\n");
  continuar = this.scan.nextInt();
  
  switch(continuar)
@@ -56,7 +56,7 @@ public class Menu {
  this.ExbirTurmas();
  break;
  case 6:
- this.Sair();
+ this.Voltar();
  break;
  default:
  System.out.println("Digite uma opção válida\n");
@@ -85,6 +85,7 @@ public class Menu {
  private void Aluno(){
 
  }
+
 
  private void Sair(){
  System.out.println("Até a próxima...\n");
