@@ -1,11 +1,15 @@
 
+import java.util.ArrayList;
+
 import dominio.Aluno;
 import dominio.Disciplina;
 import dominio.NotaTrabalho;
 import dominio.Professor;
 import dominio.Trabalho;
 import dominio.Turma;
-
+import fakeDB.DisciplinaFakeDB;
+import fakeDB.ProfessorFakeDB;
+import fakeDB.TurmaFakeDB;
 import repositorio.AlunoRepositorio;
 import repositorio.DisciplinaRepositorio;
 import repositorio.NotaTrabalhoRepositorio;
@@ -17,8 +21,37 @@ import repositorio.TurmaRepositorio;
 public class App {
     public static void main(String[] args) throws Exception {
 
+        /*ProfessorFakeDB d1 = new ProfessorFakeDB();
+        ArrayList<Professor> professores = d1.getTabela();
+        TurmaFakeDB t1 = new TurmaFakeDB();
+        ArrayList<Turma> turmas = t1.getTabela();
+        int codigo = 1;
 
-        AlunoRepositorio repo = new AlunoRepositorio();
+            for (Professor professor :professores) {
+                if (professor.getCodigo() == codigo,  )
+                professor.Imprimir();
+            }*/
+
+            ProfessorRepositorio repo = new ProfessorRepositorio();
+            Professor profselecionado = repo.Read(1);
+           int cod = profselecionado.getCodigo();
+
+            TurmaRepositorio repo1 = new TurmaRepositorio();
+            for (Turma turma : repo1.ReadAll()) {
+                int prof = turma.getProfessor();
+                System.out.println(prof);
+                    
+                }
+
+                }
+                
+                
+            }
+            
+
+        
+
+        /*AlunoRepositorio repo = new AlunoRepositorio();
          for (Aluno aluno : repo.Read() {
              System.out.println("-----------------------------------");
              aluno.Imprimir();

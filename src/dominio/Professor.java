@@ -8,6 +8,7 @@ public class Professor extends BasePessoa{
 
 
 
+
     public Professor(int codigo, String nome, LocalDate dataNascimento, String nomeUsuario, String senha, String cargo) {
         super(codigo, nome, dataNascimento, nomeUsuario, senha);
         this.cargo = cargo;

@@ -5,6 +5,8 @@ import java.time.LocalDate;
 public class Aluno extends BasePessoa {
 
     private int periodo;
+    
+
 
     public Aluno(int codigo, String nome, LocalDate dataNascimento, String nomeUsuario, String senha, int periodo) {
         super(codigo, nome, dataNascimento, nomeUsuario, senha);
