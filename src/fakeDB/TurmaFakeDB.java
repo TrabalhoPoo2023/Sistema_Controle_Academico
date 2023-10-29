@@ -56,4 +56,8 @@ public class TurmaFakeDB extends BaseGenericaFakeDB<Turma> {
     public List<Turma> getTurmas() {
         return turmas;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d4184ecb340a8d23d4b0601269c43b99bb53f974

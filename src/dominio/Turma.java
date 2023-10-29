@@ -18,13 +18,6 @@ public Turma(int codigo, int capacidadeTurma, Disciplina disciplina,Professor pr
         this.professor = new Professor();
     }
 
-public Turma(int codigo, int capacidadeTurma) {
-    super(codigo);
-    this.capacidadeTurma = capacidadeTurma;
-
-}
-
-
 public Turma() {
 }
 
