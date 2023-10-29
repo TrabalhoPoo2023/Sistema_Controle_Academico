@@ -16,10 +16,29 @@ import repositorio.NotaTrabalhoRepositorio;
 import repositorio.ProfessorRepositorio;
 import repositorio.TrabalhoRepositorio;
 import repositorio.TurmaRepositorio;
+import Menu;
 
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
         /*ProfessorFakeDB d1 = new ProfessorFakeDB();
         ArrayList<Professor> professores = d1.getTabela();
@@ -38,7 +57,7 @@ public class App {
 
             //essa parte aqui é pra procura o professor pelo codigo informado, no caso ai eu já deixei um pre definido
             // mas da pra deixar para o usuario colocar o codigo
-            ProfessorRepositorio repo = new ProfessorRepositorio();
+            /*ProfessorRepositorio repo = new ProfessorRepositorio();
             Professor profselecionado = repo.Read(1);
             String p = profselecionado.getNome();
             //System.out.println(p);

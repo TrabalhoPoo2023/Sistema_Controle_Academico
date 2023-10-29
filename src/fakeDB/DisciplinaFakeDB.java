@@ -31,8 +31,5 @@ public class DisciplinaFakeDB extends BaseGenericaFakeDB<Disciplina> {
     public List<Disciplina> getDisciplinas() {
         return disciplinas;
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> d4184ecb340a8d23d4b0601269c43b99bb53f974

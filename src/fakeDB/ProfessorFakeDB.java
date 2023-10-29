@@ -32,8 +32,4 @@ public class ProfessorFakeDB extends BaseGenericaFakeDB<Professor> {
     public List<Professor> getProfessores() {
         return professores;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d4184ecb340a8d23d4b0601269c43b99bb53f974
