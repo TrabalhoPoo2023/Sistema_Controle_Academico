@@ -1,10 +1,13 @@
 package dominio;
 
+import java.util.ArrayList;
+
 public class Turma extends BaseIdentificador{
     
     private int capacidadeTurma;
     private Disciplina disciplina;
     private Professor professor;
+    private ArrayList<Aluno> alunos;
 
 
     
@@ -15,7 +18,18 @@ public Turma(int codigo, int capacidadeTurma, Disciplina disciplina,Professor pr
         this.professor = new Professor();
     }
 
+public Turma(int codigo, int capacidadeTurma) {
+    super(codigo);
+    this.capacidadeTurma = capacidadeTurma;
+
+}
+
+
 public Turma() {
+}
+
+public Turma(int codigo) {
+    super(codigo);
 }
 
 @Override
@@ -24,7 +38,7 @@ public void Imprimir(){
     System.out.println("Cod: "+this.codigo);
     System.out.println("Capacidade total de alunos: "+this.capacidadeTurma);
     System.out.println("Disciplina: "+this.disciplina.nome);
-    System.out.println("Professor: "+ this.professor);
+    System.out.println("Professor: "+ this.professor.nome);
 }
 
     public int getCapacidadeTurma() {
@@ -37,7 +51,9 @@ public void Imprimir(){
     public Professor getProfessor() {
         return professor;
     }
-
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
 
     public void setCapacidadeTurma(int capacidadeTurma) {
         this.capacidadeTurma = capacidadeTurma;
@@ -48,5 +64,9 @@ public void Imprimir(){
     }
     public void setProfessor(Professor professor) {
         this.professor= professor;
+    }
+
+    public void setAlunos(ArrayList<Aluno> alunos) {
+        this.alunos= alunos;
     }
 }

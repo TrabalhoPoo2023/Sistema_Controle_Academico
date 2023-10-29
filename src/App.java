@@ -32,19 +32,26 @@ public class App {
                 professor.Imprimir();
             }*/
 
+
+
+
+
+            //essa parte aqui é pra procura o professor pelo codigo informado, no caso ai eu já deixei um pre definido
+            // mas da pra deixar para o usuario colocar o codigo
             ProfessorRepositorio repo = new ProfessorRepositorio();
             Professor profselecionado = repo.Read(1);
-           int cod = profselecionado.getCodigo();
+            String p = profselecionado.getNome();
+            //System.out.println(p);
+           
 
-            TurmaRepositorio repo1 = new TurmaRepositorio();
+           TurmaRepositorio repo1 = new TurmaRepositorio();
             for (Turma turma : repo1.ReadAll()) {
-                int prof = turma.getProfessor();
-                System.out.println(prof);
+                    turma.Imprimir();
+                //System.out.println(p);
                     
                 }
 
                 }
-                
                 
             }
             

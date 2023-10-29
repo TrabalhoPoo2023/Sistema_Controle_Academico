@@ -27,7 +27,7 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
 
         for (Aluno aluno : alunos) {
             
-            RendimentoEscolar r1 = new RendimentoEscolar();
+            ArrayList<RendimentoEscolar> r1 = new ArrayList<RendimentoEscolar>();
             Aluno al1 = aluno;
             r1.setCodigo(1);
             r1.setAluno(al1);
