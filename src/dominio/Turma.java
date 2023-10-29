@@ -15,6 +15,9 @@ public Turma(int codigo, int capacidadeTurma, Disciplina disciplina,Professor pr
         this.professor = new Professor();
     }
 
+public Turma(int codigo, int capacidadeTurma, Professor prof1, Professor prof2, Disciplina disciplina1, Disciplina disciplina2, Aluno aluno1, Aluno aluno2, Aluno aluno3) {
+}
+
 public Turma() {
 }
 
