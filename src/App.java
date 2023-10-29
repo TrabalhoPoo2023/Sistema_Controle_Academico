@@ -16,11 +16,12 @@ import repositorio.NotaTrabalhoRepositorio;
 import repositorio.ProfessorRepositorio;
 import repositorio.TrabalhoRepositorio;
 import repositorio.TurmaRepositorio;
-import Menu;
 
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        Menu menu = new Menu();
 
 
 
