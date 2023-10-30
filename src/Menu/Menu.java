@@ -1,5 +1,7 @@
+package Menu;
 import java.util.Scanner;
 import servico.ProfessorServico;
+import dominio.Professor;
 
 public class Menu {
  private Scanner scan;
@@ -52,9 +54,9 @@ public class Menu {
  case 4:
  this.ExibirProfessor();
  break;
- case 5:
- this.ExbirTurmas();
- break;
+ //case 5:
+ //this.ExbirTurmas();
+ //break;
  case 6:
  this.Voltar();
  break;
@@ -80,12 +82,12 @@ public class Menu {
 
 
 
-
-
  private void Aluno(){
 
  }
-
+private void Voltar(){
+ System.out.println("Até a próxima...\n");
+ }
 
  private void Sair(){
  System.out.println("Até a próxima...\n");

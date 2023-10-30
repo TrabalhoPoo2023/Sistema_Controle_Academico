@@ -37,6 +37,7 @@ public class TurmaRepositorio extends BaseGenericaCRUD <TurmaFakeDB, Turma>{
         alvo.setCapacidadeTurma(instancia.getCapacidadeTurma());
         alvo.setDisciplina(instancia.getDisciplina());
         alvo.setProfessor(instancia.getProfessor());
+        alvo.setAlunos(instancia.getAlunos());
         return alvo;
     }
 //metodo para excluir um turma;

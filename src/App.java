@@ -1,5 +1,5 @@
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 import dominio.Aluno;
 import dominio.Disciplina;
@@ -15,31 +15,17 @@ import repositorio.DisciplinaRepositorio;
 import repositorio.NotaTrabalhoRepositorio;
 import repositorio.ProfessorRepositorio;
 import repositorio.TrabalhoRepositorio;
-import repositorio.TurmaRepositorio;
-
+import repositorio.TurmaRepositorio;*/
+import Menu.Menu;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Menu menu = new Menu();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       Menu menu = new Menu();
+        menu.Executar();
 
     }
+}
 
         /*ProfessorFakeDB d1 = new ProfessorFakeDB();
         ArrayList<Professor> professores = d1.getTabela();

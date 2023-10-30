@@ -16,5 +16,7 @@ public abstract class BaseGenericaServico<TRepo, TDominio> {
 
     public abstract TDominio Excluir(int codigo);
 
-    public BaseGenericaServico(){}
+    public BaseGenericaServico(){
+        
+    }
 }
