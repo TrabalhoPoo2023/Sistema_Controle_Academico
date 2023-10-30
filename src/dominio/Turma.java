@@ -31,7 +31,7 @@ public void Imprimir(){
     System.out.println("*************************");
     System.out.println("Cod: "+this.codigo);
     System.out.println("Capacidade total de alunos: "+this.capacidadeTurma);
-    System.out.println("Disciplina: "+this.disciplina.nome);
+    System.out.println("Disciplina: "+this.disciplina);
     System.out.println("Professor: "+ this.professor.nome);
 }
 
@@ -39,7 +39,7 @@ public void Imprimir(){
         return capacidadeTurma;
     }
  
-    public Disciplina getDisciplina() {
+    public ArrayList<Disciplina> getDisciplina() {
         return disciplina;
     }
     public Professor getProfessor() {
@@ -53,7 +53,7 @@ public void Imprimir(){
         this.capacidadeTurma = capacidadeTurma;
     }
 
-    public void setDisciplina(Disciplina disciplina) {
+    public void setDisciplina(ArrayList<Disciplina> disciplina) {
         this.disciplina = disciplina;
     }
     public void setProfessor(Professor professor) {
