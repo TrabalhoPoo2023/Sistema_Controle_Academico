@@ -1,3 +1,59 @@
+//TESTE IMPRESSÃO NOTAS DE TRABALHO
+/*import java.time.LocalDate;
+
+import dominio.Aluno;
+import dominio.Disciplina;
+import dominio.NotaTrabalho;
+import dominio.Trabalho;
+
+public class App {
+    public static void main(String[] args) {
+        // Crie algumas instâncias de Aluno, Trabalho, Disciplina e NotaTrabalho
+        Aluno aluno1 = new Aluno(1, "Mateus", LocalDate.of(1994, 6, 5), "123456", "987654", 20201001); 
+        Disciplina disciplina1 = new Disciplina(1, "Matemática", "Ementa de Matemática");
+        Trabalho trabalho1 = new Trabalho(1, "Trabalho 1", disciplina1);
+        Trabalho trabalho2m = new Trabalho(2, "Trabalho 2", disciplina1);
+
+        NotaTrabalho nota1 = new NotaTrabalho(1, 9.5, aluno1, trabalho1, disciplina1);
+        NotaTrabalho nota2 = new NotaTrabalho(2, 8.0, aluno1, trabalho2m, disciplina1);
+
+        Disciplina disciplina2 = new Disciplina(2, "História", "Ementa de História");
+        Trabalho trabalho1h = new Trabalho(3, "Trabalho 1", disciplina2);
+        Trabalho trabalho2h = new Trabalho(4, "Trabalho 2", disciplina2);
+
+        NotaTrabalho nota3 = new NotaTrabalho(3, 9.0, aluno1, trabalho1h, disciplina2);
+        NotaTrabalho nota4 = new NotaTrabalho(4, 8.0, aluno1, trabalho2h, disciplina2);
+
+        // Chame o método Imprimir para imprimir as notas
+        nota1.Imprimir();
+        nota2.Imprimir();
+        nota3.Imprimir();
+        nota4.Imprimir();
+    }
+}
+
+
+/*import fakeDB.TrabalhoFakeDB;
+
+public class App {
+    public static void main(String[] args) {
+        TrabalhoFakeDB trabalhoDB = new TrabalhoFakeDB();
+        trabalhoDB.CarregarDados(); // Carrega os dados dos trabalhos
+
+        trabalhoDB.ImprimirTrabalhos(); // Imprime as informações dos trabalhos
+    }
+}
+
+
+/*public class App {
+public static void main(String[] args) {
+    TurmaFakeDB turmaDB = new TurmaFakeDB();
+    turmaDB.CarregarDados(); // Carrega os dados das turmas
+
+    // Imprime as informações das turmas
+    turmaDB.ImprimirTurmas();
+}
+}
 
 /*import java.util.ArrayList;
 
