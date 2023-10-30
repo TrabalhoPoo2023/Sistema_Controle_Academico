@@ -1,6 +1,17 @@
 //----------------------FAKEDB
 
-//TESTE IMPRESSÃO NOTAS DE TRABALHO
+//TESTE IMPRESSÃO NOTAS DE TRABALHOS
+/*import fakeDB.NotaTrabalhoFakeDB;
+
+public class App {
+    public static void main(String[] args) {
+        NotaTrabalhoFakeDB fakeDB = new NotaTrabalhoFakeDB();
+        fakeDB.CarregarDados();
+        fakeDB.imprimirNotas();
+    }
+}
+
+//TESTE IMPRESSÃO NOTAS DE TRABALHO 2
 /*import java.time.LocalDate;
 import dominio.Aluno;
 import dominio.Disciplina;
