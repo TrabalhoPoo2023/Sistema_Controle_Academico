@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Turma extends BaseIdentificador{
     
     private int capacidadeTurma;
-    private Disciplina disciplina;
+    private ArrayList<Disciplina> disciplina;
     private Professor professor;
     private ArrayList<Aluno> alunos;
 
@@ -14,8 +14,9 @@ public class Turma extends BaseIdentificador{
 public Turma(int codigo, int capacidadeTurma, Disciplina disciplina,Professor professor) {
         super(codigo);
         this.capacidadeTurma = capacidadeTurma;
-        this.disciplina = new Disciplina();
+        this.disciplina = new ArrayList<Disciplina>();
         this.professor = new Professor();
+        this.alunos = new ArrayList<Aluno>();
     }
 
 public Turma() {
