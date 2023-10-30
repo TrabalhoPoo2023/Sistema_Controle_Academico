@@ -1,3 +1,5 @@
+//----------------------FAKEDB
+
 //TESTE IMPRESSÃO NOTAS DE TRABALHO
 /*import java.time.LocalDate;
 
@@ -54,6 +56,88 @@ public static void main(String[] args) {
     turmaDB.ImprimirTurmas();
 }
 }
+
+// Teste FakeDB
+
+// ALUNOS
+// import java.util.List;
+
+// import dominio.Aluno;
+// import fakeDB.AlunoFakeDB;
+
+// public class App {
+//     public static void main(String[] args) {
+//         AlunoFakeDB alunoDB = new AlunoFakeDB();
+//         alunoDB.CarregarDados(); // Carrega os dados dos alunos
+
+//         // Obtém a lista de alunos
+//         List<Aluno> alunos = alunoDB.getAlunos();
+
+//         // Percorre a lista e imprime os dados de cada aluno
+//         for (Aluno aluno : alunos) {
+//             System.out.println("Código: " + aluno.getCodigo());
+//             System.out.println("Nome: " + aluno.getNome());
+//             System.out.println("Data de Nascimento: " + aluno.getDataNascimento());
+//             System.out.println("Usuario: "+ aluno.getNomeUsuario());
+//             System.out.println("Senha: "+ aluno.getSenha());
+//             System.out.println("Periodo: "+ aluno.getPeriodo());
+//             System.out.println();
+//         }
+//     }
+// }
+
+// PROFESSORES
+// import java.util.List;
+
+// import dominio.Professor;
+// import fakeDB.ProfessorFakeDB;
+
+// public class App {
+//     public static void main(String[] args) {
+//         ProfessorFakeDB professorDB = new ProfessorFakeDB();
+//         professorDB.CarregarDados(); // Carrega os dados dos professores
+
+//         // Obtém a lista de professores
+//         List<Professor> professores = professorDB.getProfessores();
+
+//         // Percorre a lista e imprime os dados de cada professor
+//         for (Professor professor : professores) {
+//             System.out.println("Código: " + professor.getCodigo());
+//             System.out.println("Nome: " + professor.getNome());
+//             System.out.println("Data de Nascimento: " + professor.getDataNascimento());
+//             System.out.println("Usuário: " + professor.getNomeUsuario());
+//             System.out.println("Senha: " + professor.getSenha());
+//             System.out.println("Cargo: " + professor.getCargo());
+//             System.out.println();
+//         }
+//     }
+// }
+
+// DISCIPLINAS
+// import java.util.List;
+
+// import dominio.Disciplina;
+// import fakeDB.DisciplinaFakeDB;
+
+// public class App {
+//     public static void main(String[] args) {
+//         DisciplinaFakeDB disciplinaDB = new DisciplinaFakeDB();
+//         disciplinaDB.CarregarDados(); // Carrega os dados das disciplinas
+
+//         // Obtém a lista de disciplinas
+//         List<Disciplina> disciplinas = disciplinaDB.getDisciplinas();
+
+//         // Percorre a lista e imprime os dados de cada disciplina
+//         for (Disciplina disciplina : disciplinas) {
+//             System.out.println("Código: " + disciplina.getCodigo());
+//             System.out.println("Nome: " + disciplina.getNome());
+//             System.out.println("Ementa: " + disciplina.getEmenta());
+//             System.out.println();
+//         }
+//     }
+// }
+
+\\---------------------------------- REPOSITORIO
 
 /*import java.util.ArrayList;
 
@@ -165,123 +249,4 @@ public class App {
         NotaTrabalho nt = new NotaTrabalho(56985, 6.5, a, null);
         nt.Imprimir();*/
 
-
-        /*Area Teste Impressão FakeDB
-        
-import java.util.ArrayList;
-import dominio.Aluno;
-import dominio.Disciplina;
-import dominio.NotaTrabalho;
-import dominio.Professor;
-import dominio.RendimentoEscolar;
-import dominio.Trabalho;
-import dominio.Turma;
-import fakeDB.AlunoFakeDB;
-import fakeDB.DisciplinaFakeDB;
-import fakeDB.NotaTrabalhoFakeDB;
-import fakeDB.ProfessorFakeDB;
-import fakeDB.RendimentoEscolarFakeDB;
-import fakeDB.TrabalhoFakeDB;
-import fakeDB.TurmaFakeDB;
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        // FakeDB de Professores
-        ProfessorFakeDB professorFakeDB = new ProfessorFakeDB();
-        ArrayList<Professor> professores = professorFakeDB.getTabela();
-        System.out.println("Professores:");
-        for (Professor professor : professores) {
-            System.out.println("*************************");
-            System.out.println("Código: " + professor.getCodigo());
-            System.out.println("Nome: " + professor.getNome());
-            System.out.println("Data de Nascimento: " + professor.getDataNascimento());
-            System.out.println("Nome de Usuário: " + professor.getNomeUsuario());
-            System.out.println("Senha: " + professor.getSenha());
-            System.out.println("Cargo: " + professor.getCargo());
-        }
-
-        // FakeDB de Alunos
-        AlunoFakeDB alunoFakeDB = new AlunoFakeDB();
-        ArrayList<Aluno> alunos = alunoFakeDB.getTabela();
-        System.out.println("\nAlunos:");
-        for (Aluno aluno : alunos) {
-            System.out.println("*************************");
-            System.out.println("Código: " + aluno.getCodigo());
-            System.out.println("Nome: " + aluno.getNome());
-            System.out.println("Data de Nascimento: " + aluno.getDataNascimento());
-            System.out.println("Nome de Usuário: " + aluno.getNomeUsuario());
-            System.out.println("Senha: " + aluno.getSenha());
-            System.out.println("Período: " + aluno.getPeriodo());
-        }
-
-        // FakeDB de Disciplina
-        DisciplinaFakeDB disciplinaFakeDB = new DisciplinaFakeDB();
-        ArrayList<Disciplina> disciplinas = disciplinaFakeDB.getTabela();
-        System.out.println("\nDisciplinas:");
-        for (Disciplina disciplina : disciplinas) {
-            System.out.println("*************************");
-            System.out.println("Código: " + disciplina.getCodigo());
-            System.out.println("Nome: " + disciplina.getNome());
-            System.out.println("Ementa: " + disciplina.getEmenta());
-        }
-
-        // FakeDB de Turma
-        TurmaFakeDB turmaFakeDB = new TurmaFakeDB();
-        ArrayList<Turma> turmas = turmaFakeDB.getTabela();
-        System.out.println("\nTurmas:");
-        for (Turma turma : turmas) {
-            System.out.println("*************************");
-            System.out.println("Código: " + turma.getCodigo());
-            System.out.println("Capacidade Total de Alunos: " + turma.getCapacidadeTurma());
-            System.out.println("Disciplina: " + turma.getDisciplina().getNome());
-            System.out.println("Professor: " + turma.getProfessor().getNome());
-        }
-
-           // FakeDB de Trabalho
-        TrabalhoFakeDB trabalhoFakeDB = new TrabalhoFakeDB();
-        ArrayList<Trabalho> trabalhos = trabalhoFakeDB.getTabela();
-        System.out.println("\nTrabalhos:");
-        for (Trabalho trabalho : trabalhos) {
-            System.out.println("*************************");
-            System.out.println("Código: " + trabalho.getCodigo());
-            System.out.println("Descrição: " + trabalho.getDescricao());
-            System.out.println("Disciplina: " + trabalho.getDisciplina().getNome());
-        }
-
-        // FakeDB de NotaTrabalho
-        NotaTrabalhoFakeDB notaTrabalhoFakeDB = new NotaTrabalhoFakeDB();
-        ArrayList<NotaTrabalho> notasTrabalho = notaTrabalhoFakeDB.getTabela();
-        System.out.println("\nNotas Trabalhos:");
-        for (NotaTrabalho notaTrabalho : notasTrabalho) {
-            System.out.println("*************************");
-            System.out.println("Código: " + notaTrabalho.getCodigo());
-            System.out.println("Nota: " + notaTrabalho.getNota());
-            System.out.println("Aluno: " + notaTrabalho.getAluno().getNome());
-            System.out.println("Trabalho: " + notaTrabalho.getTrabalho().getDescricao());
-        }
-
-        // FakeDB de RendimentoEscolar
-        RendimentoEscolarFakeDB rendimentoEscolarFakeDB = new RendimentoEscolarFakeDB();
-        ArrayList<RendimentoEscolar> rendimentos = rendimentoEscolarFakeDB.getTabela();
-        System.out.println("\nRendimento Escolar:");
-        for (RendimentoEscolar rendimento : rendimentos) {
-            System.out.println("*************************");
-            System.out.println("Aluno: " + rendimento.getAluno().getNome());
-            System.out.println("Turma: " + rendimento.getTurma().getCodigo());
-            System.out.println("Nota 1ª Prova: " + rendimento.getNota1());
-            System.out.println("Nota 2ª Prova: " + rendimento.getNota2());
-            System.out.println("Trabalhos: ");
-            
-            // Imprimindo as notas de trabalho
-            for (NotaTrabalho notaTrabalho : rendimento.getTrabalhos()) {
-                System.out.println("  Código Trabalho: " + notaTrabalho.getTrabalho().getCodigo());
-                System.out.println("  Descrição Trabalho: " + notaTrabalho.getTrabalho().getDescricao());
-                System.out.println("  Nota Trabalho: " + notaTrabalho.getNota());
-            }
-            
-            System.out.println("Média Trabalhos: " + rendimento.getMediaTrabalhos());
-            System.out.println("Média Geral: " + rendimento.getMediaGeral());
-        }
-    }
-}*/
 
