@@ -5,7 +5,6 @@ import dominio.Aluno;
 import dominio.Disciplina;
 import dominio.Trabalho;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +64,7 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
         notasAluno2.add(nota42);
 
         notasAluno3 = new ArrayList<>();
-        Aluno aluno3 = new Aluno(3, "Pedro", LocalDate.of(1994, 7, 5), "123454", "987652", 20201003);
+        Aluno aluno3 = alunos.get(2);
         NotaTrabalho nota13 = new NotaTrabalho(11, 1.0, aluno3, trabalho1m, disciplina1);
         NotaTrabalho nota23 = new NotaTrabalho(21, 9.0, aluno3, trabalho2m, disciplina1);
 
@@ -78,17 +77,17 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
         notasAluno3.add(nota43);
 
         notasAluno4 = new ArrayList<>();
-        Aluno aluno4 = new Aluno(4, "Tiago", LocalDate.of(1994, 3, 5), "123453", "987651", 20201004);
-        Trabalho trabalho1f = trabalhos.get(0);
-        Trabalho trabalho2f = trabalhos.get(1);
-        Disciplina disciplina3 = disciplinas.get(0);
+        Aluno aluno4 = alunos.get(3);
+        Trabalho trabalho1f = trabalhos.get(4);
+        Trabalho trabalho2f = trabalhos.get(5);
+        Disciplina disciplina3 = disciplinas.get(2);
 
         NotaTrabalho nota14 = new NotaTrabalho(14, 9.0, aluno4, trabalho1f, disciplina3);
         NotaTrabalho nota24 = new NotaTrabalho(24, 8.0, aluno4, trabalho2f, disciplina3);
 
-        Trabalho trabalho1q = trabalhos.get(2);
-        Trabalho trabalho2q = trabalhos.get(3);
-        Disciplina disciplina4 = disciplinas.get(1);
+        Trabalho trabalho1q = trabalhos.get(6);
+        Trabalho trabalho2q = trabalhos.get(7);
+        Disciplina disciplina4 = disciplinas.get(3);
 
         NotaTrabalho nota34 = new NotaTrabalho(34, 10.0, aluno4, trabalho1q, disciplina4);
         NotaTrabalho nota44 = new NotaTrabalho(44, 5.0, aluno4, trabalho2q, disciplina4);
@@ -99,7 +98,7 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
         notasAluno4.add(nota44);
 
         notasAluno5 = new ArrayList<>();
-        Aluno aluno5 = new Aluno(5, "João", LocalDate.of(1995, 2, 25), "123452", "987655", 20201005);
+        Aluno aluno5 = alunos.get(4);
         NotaTrabalho nota15 = new NotaTrabalho(15, 2.0, aluno5, trabalho1f, disciplina3);
         NotaTrabalho nota25 = new NotaTrabalho(25, 6.0, aluno5, trabalho2f, disciplina3);
 
@@ -112,7 +111,7 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
         notasAluno5.add(nota45);
 
         notasAluno6 = new ArrayList<>();
-        Aluno aluno6 = new Aluno(6, "Gabriel", LocalDate.of(1996, 4, 15), "123451", "987656", 20201006);
+        Aluno aluno6 = alunos.get(5);
         NotaTrabalho nota16 = new NotaTrabalho(16, 8.0, aluno6, trabalho1f, disciplina3);
         NotaTrabalho nota26 = new NotaTrabalho(26, 4.0, aluno6, trabalho2f, disciplina3);
 
@@ -127,27 +126,22 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
     }
 
     public void imprimirNotas() {
-        for (NotaTrabalho nota : notasAluno1) {
-            nota.Imprimir(); 
+        List<NotaTrabalho> todasAsNotas = getNotas();
+    
+        for (NotaTrabalho nota : todasAsNotas) {
+            nota.Imprimir();
         }
-        for (NotaTrabalho nota : notasAluno2) {
-            nota.Imprimir(); 
-        }
-        for (NotaTrabalho nota : notasAluno3) {
-            nota.Imprimir(); 
-        }
-        for (NotaTrabalho nota : notasAluno4) {
-            nota.Imprimir(); 
-        }
-        for (NotaTrabalho nota : notasAluno5) {
-            nota.Imprimir(); 
-        }
-        for (NotaTrabalho nota : notasAluno6) {
-            nota.Imprimir(); 
-        }
-    }
+    }    
 
     public List<NotaTrabalho> getNotas() {
-        return notasAluno1;
+        List<NotaTrabalho> todasAsNotas = new ArrayList<>();
+        todasAsNotas.addAll(notasAluno1);
+        todasAsNotas.addAll(notasAluno2);
+        todasAsNotas.addAll(notasAluno3);
+        todasAsNotas.addAll(notasAluno4);
+        todasAsNotas.addAll(notasAluno5);
+        todasAsNotas.addAll(notasAluno6);
+        return todasAsNotas;
     }
+    
 }
