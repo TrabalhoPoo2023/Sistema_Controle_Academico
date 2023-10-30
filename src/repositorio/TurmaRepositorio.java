@@ -35,8 +35,8 @@ public class TurmaRepositorio extends BaseGenericaCRUD <TurmaFakeDB, Turma>{
     public Turma Update(Turma instancia) {
         Turma alvo = this.Read(instancia.getCodigo());
         alvo.setCapacidadeTurma(instancia.getCapacidadeTurma());
-        alvo.setDisciplina(instancia.getDisciplina());
-        alvo.setProfessor(instancia.getProfessor());
+        alvo.setDisciplinas(instancia.getDisciplinas());
+        alvo.setProfessores(instancia.getProfessores());
         alvo.setAlunos(instancia.getAlunos());
         return alvo;
     }

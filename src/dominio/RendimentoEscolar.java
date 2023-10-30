@@ -2,7 +2,7 @@ package dominio;
 
 import java.util.List;
 
-public class RendimentoEscolar implements IImpressao{
+public class RendimentoEscolar extends BaseIdentificador{
     private Aluno aluno;
     private Turma turma;
     private double nota1;
@@ -10,9 +10,10 @@ public class RendimentoEscolar implements IImpressao{
     private List<NotaTrabalho> trabalhos;
     private double mediaTrabalhos;
     private double mediaGeral;
-
-    public RendimentoEscolar(Aluno aluno, Turma turma, double nota1, double nota2, List<NotaTrabalho> trabalhos,
-            double mediaTrabalhos, double mediaGeral) {
+    
+    public RendimentoEscolar(int codigo, Aluno aluno, Turma turma, double nota1, double nota2,
+            List<NotaTrabalho> trabalhos, double mediaTrabalhos, double mediaGeral) {
+        super(codigo);
         this.aluno = aluno;
         this.turma = turma;
         this.nota1 = nota1;
@@ -20,6 +21,10 @@ public class RendimentoEscolar implements IImpressao{
         this.trabalhos = trabalhos;
         this.mediaTrabalhos = mediaTrabalhos;
         this.mediaGeral = mediaGeral;
+    }
+
+    public RendimentoEscolar(int codigo) {
+        super(codigo);
     }
 
     public Aluno getAluno() {
