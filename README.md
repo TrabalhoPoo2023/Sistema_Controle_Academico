@@ -1,13 +1,18 @@
 ATIVIDADE A2 - Sistema de Controle Academico
 - --
 - Diagramas:
-- Diagrama Dominío: Bruno
-- Diagrama FakeDB: Izabella Teixeira Rodrigues
+- Diagrama Dominío: Bruno Gonçalves
+- Diagrama FakeDB: Izabella Rodrigues
 - Diagrama Repositório
 - Diagrama Serviço: Isaac
 - --
 - Código:
-- Camada Dominío: Bruno
-- Camada FakeDB: Izabella
-- Camada Repositório: Bruno
+- Camada Dominío: Bruno Gonçalves
+- Camada FakeDB: Izabella Rodrigues
+- Camada Repositório: Bruno Gonçalves
 - Camada Serviço: Isaac
+- --
+Acadêmicos:
+- Bruno Gonçalves - RA: 338803513098 - Ciência da Computação - 5º Semestre - Noturno
+- Isaac
+- Izabella Rodrigues - RA: 332990713098 - Ciência da Computação - 4º Semestre - Noturno
