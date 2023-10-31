@@ -4,13 +4,13 @@ ATIVIDADE A2 - Sistema de Controle Academico
 - Diagrama Dominío: Bruno Gonçalves
 - Diagrama FakeDB: Izabella Rodrigues
 - Diagrama Repositório
-- Diagrama Serviço: Isaac
+- Diagrama Serviço: Isaac Viegas
 - --
 - Código:
 - Camada Dominío: Bruno Gonçalves
 - Camada FakeDB: Izabella Rodrigues
 - Camada Repositório: Bruno Gonçalves
-- Camada Serviço: Isaac
+- Camada Serviço: Isaac Viegas
 - --
 Acadêmicos:
 - Bruno Gonçalves - RA: 338803513098 - Ciência da Computação - 5º Semestre - Noturno
