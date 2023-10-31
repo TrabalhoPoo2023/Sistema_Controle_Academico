@@ -7,19 +7,49 @@ public class Turma extends BaseIdentificador {
     private Professor[] professores;
     private Aluno[] alunos;
 
-    public Turma(int codigo, int capacidadeTurma, Disciplina[] disciplinas, Professor[] professores, Aluno[] alunos) {
+    public Turma(int codigo, int capacidadeTurma, Aluno[] alunos, Disciplina[] disciplinas, Professor[] professores) {
         super(codigo);
         this.capacidadeTurma = capacidadeTurma;
+        this.alunos = alunos;
         this.disciplinas = disciplinas;
         this.professores = professores;
-        this.alunos = alunos;
     }
 
     public Turma(int codigo) {
         super(codigo);
     }
 
+    public int getCapacidadeTurma() {
+        return capacidadeTurma;
+    }
 
+    public void setCapacidadeTurma(int capacidadeTurma) {
+        this.capacidadeTurma = capacidadeTurma;
+    }
+
+    public Disciplina[] getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(Disciplina[] disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    public Professor[] getProfessores() {
+        return professores;
+    }
+
+    public void setProfessores(Professor[] professores) {
+        this.professores = professores;
+    }
+
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Aluno[] alunos) {
+        this.alunos = alunos;
+    }
 
     @Override
     public void Imprimir() {
@@ -38,37 +68,5 @@ public class Turma extends BaseIdentificador {
         for (Aluno aluno : alunos) {
             System.out.println("- " + aluno.getNome());
         }
-    }
-
-    public int getCapacidadeTurma() {
-        return capacidadeTurma;
-    }
-
-    public Disciplina[] getDisciplinas() {
-        return disciplinas;
-    }
-
-    public Professor[] getProfessores() {
-        return professores;
-    }
-
-    public Aluno[] getAlunos() {
-        return alunos;
-    }
-
-    public void setCapacidadeTurma(int capacidadeTurma) {
-        this.capacidadeTurma = capacidadeTurma;
-    }
-
-    public void setDisciplinas(Disciplina[] disciplinas) {
-        this.disciplinas = disciplinas;
-    }
-
-    public void setProfessores(Professor[] professores) {
-        this.professores = professores;
-    }
-
-    public void setAlunos(Aluno[] alunos) {
-        this.alunos = alunos;
     }
 }
