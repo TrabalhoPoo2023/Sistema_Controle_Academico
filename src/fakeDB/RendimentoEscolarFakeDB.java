@@ -13,7 +13,7 @@ import dominio.NotaTrabalho;
 import dominio.Professor;
 
 public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscolar> {
-    private List<RendimentoEscolar> rendimentoAluno1;
+    private List<RendimentoEscolar> rendimentos;
     private AlunoFakeDB alunoDB;
     private ProfessorFakeDB professorDB;
     private DisciplinaFakeDB disciplinaDB;
@@ -21,7 +21,6 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
     @Override
     public void CarregarDados() {
 
-        
         alunoDB = new AlunoFakeDB();
         professorDB = new ProfessorFakeDB();
         disciplinaDB = new DisciplinaFakeDB();
@@ -31,7 +30,7 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         List<Disciplina> disciplinas = disciplinaDB.getDisciplinas();
 
 
-        rendimentoAluno1 = new ArrayList<>();
+        rendimentos = new ArrayList<>();
         Aluno aluno1 = new Aluno(1, "Mateus", LocalDate.of(1994, 6, 5), "123456", "987654", 20201001);
 
         Disciplina disciplina1 = new Disciplina(1, "Matemática", "Ementa de Matemática");
@@ -56,8 +55,8 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r1 = new RendimentoEscolar(1, aluno1, turma1, disciplina1, 10.0, 8.0, trabalho1m, nota1, trabalho2m, nota2, 9.0, 9.0);
         RendimentoEscolar r2 = new RendimentoEscolar(2, aluno1, turma1, disciplina2, 5.0, 7.0, trabalho1h, nota3, trabalho2h, nota4, 8.5, 6.8);
     
-        rendimentoAluno1.add(r1);
-        rendimentoAluno1.add(r2);
+        rendimentos.add(r1);
+        rendimentos.add(r2);
 
         Aluno aluno2 = new Aluno(2, "Lucas", LocalDate.of(1993, 6, 5), "123455", "987653", 20201002);
         NotaTrabalho nota12 = new NotaTrabalho(11, 9.0, aluno2, trabalho1m, disciplina1);
@@ -68,8 +67,8 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r3 = new RendimentoEscolar(3, aluno2, turma1, disciplina1, 3.0, 9.0, trabalho1m, nota12, trabalho2m, nota22, 8.0, 6.6);
         RendimentoEscolar r4 = new RendimentoEscolar(4, aluno2, turma1, disciplina2, 5.0, 7.0, trabalho1h, nota32, trabalho2h, nota42, 6.0, 6.0);
 
-        rendimentoAluno1.add(r3);
-        rendimentoAluno1.add(r4);
+        rendimentos.add(r3);
+        rendimentos.add(r4);
 
         Aluno aluno3 = new Aluno(3, "Pedro", LocalDate.of(1994, 7, 5), "123454", "987652", 20201003);
         NotaTrabalho nota13 = new NotaTrabalho(11, 1.0, aluno3, trabalho1m, disciplina1);
@@ -80,8 +79,8 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r5 = new RendimentoEscolar(5, aluno3, turma1, disciplina1, 10.0, 8.0, trabalho1m, nota13, trabalho2m, nota23, 5.0, 7.6);
         RendimentoEscolar r6 = new RendimentoEscolar(6, aluno3, turma1, disciplina2, 4.0, 7.0, trabalho1h, nota33, trabalho2h, nota43, 7.5, 6.1);
 
-        rendimentoAluno1.add(r5);
-        rendimentoAluno1.add(r6);
+        rendimentos.add(r5);
+        rendimentos.add(r6);
 
         Disciplina disciplina3 = new Disciplina(3, "Física", "Ementa de Física");
         Disciplina disciplina4 = new Disciplina(4, "Química", "Ementa de Química");
@@ -105,8 +104,8 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r7 = new RendimentoEscolar(7, aluno4, turma2, disciplina3, 9.0, 8.0, trabalho1f, nota14, trabalho2f, nota24, 8.5, 8.5);
         RendimentoEscolar r8 = new RendimentoEscolar(8, aluno4, turma2, disciplina4, 3.0, 6.0, trabalho1q, nota34, trabalho2q, nota44, 7.5, 5.5);
 
-        rendimentoAluno1.add(r7);
-        rendimentoAluno1.add(r8);
+        rendimentos.add(r7);
+        rendimentos.add(r8);
 
         Aluno aluno5 = new Aluno(5, "João", LocalDate.of(1995, 2, 25), "123452", "987655", 20201005);
         NotaTrabalho nota15 = new NotaTrabalho(15, 2.0, aluno5, trabalho1f, disciplina3);
@@ -117,8 +116,8 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r9 = new RendimentoEscolar(9, aluno5, turma2, disciplina3, 8.0, 2.0, trabalho1f, nota15, trabalho2f, nota25, 4.0, 4.6);
         RendimentoEscolar r10 = new RendimentoEscolar(10, aluno5, turma2, disciplina4, 9.0, 7.0, trabalho1q, nota35, trabalho2q, nota45, 7.0, 7.6);
 
-        rendimentoAluno1.add(r9);
-        rendimentoAluno1.add(r10);
+        rendimentos.add(r9);
+        rendimentos.add(r10);
 
         Aluno aluno6 = new Aluno(6, "Gabriel", LocalDate.of(1996, 4, 15), "123451", "987656", 20201006);
         NotaTrabalho nota16 = new NotaTrabalho(16, 8.0, aluno6, trabalho1f, disciplina3);
@@ -129,19 +128,19 @@ public class RendimentoEscolarFakeDB extends BaseGenericaFakeDB<RendimentoEscola
         RendimentoEscolar r11 = new RendimentoEscolar(11, aluno6, turma2, disciplina3, 4.0, 9.0, trabalho1f, nota16, trabalho2f, nota26, 6.0, 6.3);
         RendimentoEscolar r12 = new RendimentoEscolar(12, aluno6, turma2, disciplina4, 10.0, 8.0, trabalho1q, nota36, trabalho2q, nota46, 9.5, 9.1);
 
-        rendimentoAluno1.add(r11);
-        rendimentoAluno1.add(r12);
+        rendimentos.add(r11);
+        rendimentos.add(r12);
     }
 
     public RendimentoEscolarFakeDB(){
         super();
-        rendimentoAluno1 = new ArrayList<>();
+        rendimentos = new ArrayList<>();
     }
 
-    public void imprimirRendimentoAluno1() {
-        for (RendimentoEscolar rendimento : rendimentoAluno1) {
+    public void imprimirRendimentos() {
+        for (RendimentoEscolar rendimento : rendimentos) {
             rendimento.Imprimir();
         }
     }
     
-}
+    }
