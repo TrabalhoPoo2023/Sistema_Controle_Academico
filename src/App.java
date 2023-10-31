@@ -7,8 +7,8 @@ public class App {
 
         public static void main(String[] args) {
             RendimentoEscolarFakeDB rendimentoDB = new RendimentoEscolarFakeDB();
-            rendimentoDB.CarregarDados(); // Carregue os dados, se necessário
-            rendimentoDB.imprimirRendimentoAluno1(); // Imprime os dados de rendimento do aluno 1
+            rendimentoDB.CarregarDados();
+            rendimentoDB.imprimirRendimentos();
         }
     }
 
